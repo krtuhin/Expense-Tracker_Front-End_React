@@ -1,3 +1,6 @@
+// import react
+import React from "react";
+
 // import react dom
 import ReactDOM from "react-dom";
 

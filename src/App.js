@@ -1,7 +1,10 @@
-// import sub component
-import Expenses from "./components/Expenses";
+// import react
+import React from "react";
 
-function App() {
+// import sub component
+import Expenses from "./components/Expenses/Expenses";
+
+const App = () => {
   // declared variable to send data using props
   // let expenseDate = new Date(2023, 8, 17);
   // let expenseTitle = "School Fees";
@@ -38,7 +41,7 @@ function App() {
       <Expenses item={expenses} />
     </div>
   );
-}
+};
 
 // export component
 export default App;

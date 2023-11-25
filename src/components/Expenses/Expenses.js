@@ -1,9 +1,12 @@
+// import react
+import React from "react";
+
 // import css and sub component
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
-import Card from "./Card";
+import Card from "../UI/Card";
 
-function Expenses(props) {
+const Expenses = (props) => {
   return (
 
     // using nested component
@@ -29,7 +32,7 @@ function Expenses(props) {
       />
     </Card>
   );
-}
+};
 
 // export component
 export default Expenses;

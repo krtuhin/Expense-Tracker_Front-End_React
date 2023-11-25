@@ -1,10 +1,13 @@
+// import react
+import React from "react";
+
 // import sub component's css
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
-import Card from "./Card";
+import Card from "../UI/Card";
 
-function ExpenseItem(props) {
-
+const ExpenseItem = (props) => {
+  
   //declare variable in component
   //   let title = "Car Insurence";
 
@@ -23,7 +26,7 @@ function ExpenseItem(props) {
       </div>
     </Card>
   );
-}
+};
 
 // export sub component
 export default ExpenseItem;

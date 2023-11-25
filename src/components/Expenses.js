@@ -1,10 +1,13 @@
 // import css and sub component
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
+import Card from "./Card";
 
 function Expenses(props) {
   return (
-    <div className="expenses">
+
+    // using nested component
+    <Card className="expenses">
       
       {/* using multiple sub compenents */}
       <ExpenseItem
@@ -24,7 +27,7 @@ function Expenses(props) {
         title={props.item[2].title}
         price={props.item[2].price}
       />
-    </div>
+    </Card>
   );
 }
 

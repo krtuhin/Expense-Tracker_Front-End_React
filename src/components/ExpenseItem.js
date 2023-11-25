@@ -1,6 +1,7 @@
 // import sub component's css
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
+import Card from "./Card";
 
 function ExpenseItem(props) {
 
@@ -8,8 +9,9 @@ function ExpenseItem(props) {
   //   let title = "Car Insurence";
 
   return (
-    <div className="expense-item">
-      
+    // using component as a parent tag
+    <Card className="expense-item">
+
       {/* using expense date sub component */}
       <ExpenseDate date={props.date} />
 
@@ -19,7 +21,7 @@ function ExpenseItem(props) {
 
         <div className="expense-item__price">$ {props.price}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 

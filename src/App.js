@@ -1,5 +1,5 @@
 // import sub component
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
 
 function App() {
   // declared variable to send data using props
@@ -35,25 +35,7 @@ function App() {
 
       {/* used sub component  */}
       {/* passing data using props */}
-
-      {/* using multiple sub compenents */}
-      <ExpenseItem
-        date={expenses[0].date}
-        title={expenses[0].title}
-        price={expenses[0].price}
-      ></ExpenseItem>
-
-      <ExpenseItem
-        date={expenses[1].date}
-        title={expenses[1].title}
-        price={expenses[1].price}
-      ></ExpenseItem>
-
-      <ExpenseItem
-        date={expenses[2].date}
-        title={expenses[2].title}
-        price={expenses[2].price}
-      ></ExpenseItem>
+      <Expenses item={expenses} />
     </div>
   );
 }

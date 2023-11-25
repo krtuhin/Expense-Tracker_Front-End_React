@@ -1,13 +1,29 @@
 // import sub component's css
 import "./ExpenseItem.css";
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+  //declare variable in component
+  //   let title = "Car Insurence";
+
+  // modify props object data to use in JSX
+  let day = props.date.toLocaleString("en-US", { day: "2-digit" });
+  let month = props.date.toLocaleString("en-US", { month: "long" });
+  let year = props.date.getFullYear();
+
   return (
     <div className="expense-item">
-      <div>August 12 2023</div>
+      <div className="expense-date">
+        {/* used modified data */}
+        <div>{day}</div>
+        <div>{month}</div>
+        <div>{year}</div>
+      </div>
+
       <div className="expense-item__description">
-        <h2>Car Insurence</h2>
-        <div className="expense-item__price">$ 400</div>
+        {/* using JS data into JSX */}
+        <h2>{props.title}</h2>
+
+        <div className="expense-item__price">$ {props.price}</div>
       </div>
     </div>
   );

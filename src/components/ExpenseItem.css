@@ -9,6 +9,16 @@
   background-color: #34495e;
 }
 
+/* expense date style */
+.expense-date {
+  display: flex;
+  flex: 0.2;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-weight: 600;
+  color: rosybrown;
+}
+
 .expense-item__description {
   display: flex;
   flex-direction: column;

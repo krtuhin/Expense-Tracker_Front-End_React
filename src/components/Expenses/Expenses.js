@@ -8,12 +8,10 @@ import Card from "../UI/Card";
 
 const Expenses = (props) => {
   return (
-
     // using nested component
     <Card className="expenses">
-      
       {/* using multiple sub compenents */}
-      <ExpenseItem
+      {/* <ExpenseItem
         date={props.item[0].date}
         title={props.item[0].title}
         price={props.item[0].price}
@@ -29,7 +27,16 @@ const Expenses = (props) => {
         date={props.item[2].date}
         title={props.item[2].title}
         price={props.item[2].price}
-      />
+      /> */}
+
+      {/* rendering list of components using map function */}
+      {props.item.map((expense) => (
+        <ExpenseItem
+          date={expense.date}
+          title={expense.title}
+          price={expense.amount}
+        />
+      ))}
     </Card>
   );
 };

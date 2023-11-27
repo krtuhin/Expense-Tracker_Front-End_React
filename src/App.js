@@ -34,10 +34,14 @@ const App = () => {
     },
   ];
 
+  // getting child's data as function parameter
+  const addExpenseHandler = (expense) => {};
+
   return (
     <div>
       {/* added new expense component */}
-      <NewExpense />
+      {/* getting data from child using props */}
+      <NewExpense onAddExpense={addExpenseHandler} />
 
       {/* used sub component  */}
       {/* passing data using props */}

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import css
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   // useState for every field
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -34,6 +34,9 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
+
+    // sending data to parent using props
+    props.onSaveExpenseData(expenseData);
 
     // set input field blank again
     setEnteredTitle("");

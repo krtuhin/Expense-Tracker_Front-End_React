@@ -4,6 +4,8 @@ import React from "react";
 // import sub component
 import Expenses from "./components/Expenses/Expenses";
 
+import NewExpense from "./components/NewExpense/NewExpense";
+
 const App = () => {
   // declared variable to send data using props
   // let expenseDate = new Date(2023, 8, 17);
@@ -34,7 +36,8 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's Start...!!</h2>
+      {/* added new expense component */}
+      <NewExpense />
 
       {/* used sub component  */}
       {/* passing data using props */}

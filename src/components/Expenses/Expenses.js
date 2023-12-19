@@ -32,6 +32,7 @@ const Expenses = (props) => {
       {/* rendering list of components using map function */}
       {props.item.map((expense) => (
         <ExpenseItem
+          key={expense.id}
           date={expense.date}
           title={expense.title}
           price={expense.amount}

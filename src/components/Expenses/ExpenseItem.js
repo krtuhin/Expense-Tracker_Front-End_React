@@ -28,7 +28,7 @@ const ExpenseItem = (props) => {
     // using component as a parent tag
     <Card className="expense-item">
       {/* using expense date sub component */}
-      <ExpenseDate date={props.date} />
+      <ExpenseDate date={new Date(props.date)} />
 
       <div className="expense-item__description">
         {/* using JS data into JSX */}
